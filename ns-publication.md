@@ -5,13 +5,13 @@
 ### Icônes & SplashScreen
 
 - Créer une icône format 1024x1024 (carré sans arrondis)
-- Générer les assets avec le [NativeScript Sidekick](https://www.nativescript.org/nativescript-sidekick), modifier juste la taille des images *Default-1125h.png* et *Default-Landscape-X* dans **App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage**, les mettre en 1125 × 2436 (si ce n'est pas déjà le cas)
+- Générer les assets avec le [NativeScript Sidekick](https://www.nativescript.org/nativescript-sidekick), modifier la taille des images *Default-1125h.png* et *Default-Landscape-X* dans **App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage**, les mettre en 1125 × 2436 (si ce n'est pas déjà le cas)
 
 ### Icône de notification (Android 8+)
 
-- Créer une icône carré, ou récupéré l'icône de l'étape précédente, mais avec avec un logo blanc sur fond transparent (pas de couleurs !!!) et générer les icones de notifications Android 8+ sur ce site : http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default, les placer dans leurs dossiers respectifs
+- Créer une icône carré, ou récupérer l'icône de l'étape précédente, mais avec avec un logo blanc sur fond transparent (pas de couleurs !!!) et générer les icones de notifications Android 8+ sur ce site : http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default, les placer dans leurs dossiers respectifs
 - Profitez en pour créer un logo 512x512 32 bit pour le PlayStore
-- Dans **values/colors.xml** & **values-v21/colors.xml** mettre la couleur de votre choix (c'est la couleur de l'icone de la notification) comme suit :
+- Dans **values/colors.xml** & **values-v21/colors.xml** mettre la couleur de votre choix (c'est la couleur de l'icône de la notification) comme suit :
 ```
 <resources>
   <!--Other color entries may exist here-->
@@ -89,16 +89,13 @@ tns build android --release
 tns build ios --release --bundle --env.uglify --env.aot
 ```
 - Ouvrir le .xcworkspace avec XCode
-- Indiquer la team de développement et activer les push notifications dans Capabilities (se retirent à chaque fois...)
-- Depuis le menu déroulant permettant de choisir le device utilisé choisir 'Generic iOS Device'
+- Indiquer la team de développement
+- Dans le menu déroulant permettant de choisir le device utilisé choisir 'Generic iOS Device'
 - Dans la barre de menu tout en haut de votre écran aller dans Product > Archive
 - Le gestionnaire de version s'ouvre, publier la version sur l'AppStore
 - Attendre de recevoir un email d'Apple indiquant que l'application est prête à être vérifiée
-- Depuis l'AppStore connect créer une nouvelle version avec le bundle qui doit maintenant apparaître dans la liste des builds à vérifier, envoyé le
-- Vous allez recevoir un email vous indiquant que l'application est bien en état de vérification, elle sera publiée automatiquement par la suite (si vous avez laisser l'option par défaut).
-- Committer le code et partir en week-end :
-```
-git commit -m ":rocket: NomDeLApplication Vx.x.x : changements"
-```
+- Depuis l'AppStore connect créer une nouvelle version avec le bundle qui doit maintenant apparaître dans la liste des builds à vérifier, l'envoyer
+- Vous allez recevoir un email vous indiquant que l'application est bien en état de vérification, elle sera publiée automatiquement par la suite (si vous avez laissé l'option par défaut).
+- Committer
 ---
 [<- Retour](./README.md)
